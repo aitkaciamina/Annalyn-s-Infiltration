@@ -1,0 +1,36 @@
+function canExecuteFastAttack(knightIsAwake)
+{
+    if(knightIsAwake===true)
+    return false;
+    else
+    return true;
+}
+
+function canspy(knightIsAwake, archerIsAwake, prisonerIsAwake)
+{
+ if(knightIsAwake === false && archerIsAwake === true && prisonerIsAwake === false)
+ return true;
+ else
+ return false;
+}
+
+function canSignalPrisoner(archerIsAwake, prisonerIsAwake)
+{
+if(archerIsAwake === false && prisonerIsAwake === true)
+return true;
+else 
+return false;
+}
+
+function canFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent)
+{
+  if (knightIsAwake === false && archerIsAwake === true && prisonerIsAwake === false && petDogIsPresent === false)
+  return false;
+  else 
+  return true;
+}
+const knightIsAwake = false;
+const archerIsAwake = true;
+const prisonerIsAwake = false;
+const petDogIsPresent = false;
+console.log(canFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent));
